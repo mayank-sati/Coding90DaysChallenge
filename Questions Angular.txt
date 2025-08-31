@@ -1,0 +1,36 @@
+angular directive template hostlistner tooltipRef smoke test
+
+1) What are directives in Angular?
+Ans=> https://www.tatvasoft.com/outsourcing/2023/06/directives-in-angular.html
+
+2) In a template how can be distinguish b/w Attribute and Structural Directive?
+
+3) Is asterisk (*) mandatory to use before structural directive?
+Ans=> No, the asterisk (*) is not strictly necessary for structural directives,
+	but it is the shorthand "syntactic sugar" that makes them much easier to use.
+	Behind the scenes, Angular expands the asterisk into a more verbose <ng-template> element.
+
+	<ng-template [ngIf]="hero"> <div> {{hero.name}} </div> </ng-template>	
+	<div *ngIf="hero"> {{hero.name}} </div>
+
+
+4) Component is a directive explain?
+
+5) Life Cycle Hooks? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Ans=> https://angular.dev/guide/components/lifecycle
+
+7) ngOnit vs ngOnChanges. What is the differnce? Who is called first ngOnInit or ngOnChanges?
+   When are input properties initialized?
+
+8) What does constructor do in angular? A rule We should not write any business
+   logic or initializer logic a contructor? Technically we can subcribe to something or
+   do someting or trverse an api call in a constructor? But it is prohibited in companies Why?
+   It can cause errors in the future? Logic is cpomponent is not always initialized when
+   constructor is called. So that means ngOnDestoy would not be called.
+
+9) AfterViewInit when it is called? ngOnDestry used to cancel subscription, what are the
+   other ways manages subscription to achieve this? Async pipe. Third party libraries
+   to make them wait bioler plating? Take Until it acquires. fromNgNeet and untilDisplay.Third Party Library
+
+10) *ngFor structural directive has trackBy property
+	https://v2.angular.io/docs/ts/latest/guide/structural-directives.html#!#asterisk
