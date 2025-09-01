@@ -148,5 +148,32 @@ Ans=> https://angular.dev/guide/components/lifecycle
 	one value and then finalize themselves. So not all observables need to be subcribed. Some we may skip.
 	I would probably always use ngOnDestoy just to ensure.
 
-31) HTTP Clients. What are the benifits of using http clients? And why we are not using fetch or request?
-=>  
+31) HTTP Clients. What are the benifits of using http clients? And why we are not using fetch or XHR
+	request?
+=>  Http client is build on top of xHttp request and not upon fetch like fetch is not monkey pouched by
+	Zone.JS and the change detection doesn't run upon fetch, so angular HTTP client is wrapped with ng-Zone
+	so is run with angular so we can ensure like proper change detection when stuff is recieved. and also
+	it kind of emits observables which is kind of way to manage data with angular.
+
+32) HTTP client feature to intercept them?
+
+=> So we have interceptor with angular so we can intercept request or responses and like attach some
+	custom headers or modify the data in some way to transfor. So this is allowed because we are using
+	a single HTTP client, so this is run on top of http client.
+
+33) What is the design pattern underneath the interceptor or how interceptor is implemented?
+=> So its commly middleware.
+
+34) What if we ahve multiple interceptors how will they interact? What if we introduced an interceptor but
+	if we for some reason need to use the http client without it. What we can do with it.
+
+=> They will run all of them in sequence but in which sequence I think depending on where we provide them
+	from the closet to the most top level one.
+	Maybe override the provider to use nothing instead of you use value or class on level where its
+	provided.
+
+35) What techniques have you used for optimization in angular?
+=> Rendering optimization- I would use on push with different trackBy, have methods like caching of hard
+	computations. For data caching I would use share replay. Or some store with split the bundle up into
+	smaller bundles like with lazy loading. Probably make pwa to cache assets and then use service workers
+	for cacheing assets.
