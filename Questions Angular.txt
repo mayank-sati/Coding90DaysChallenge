@@ -32,5 +32,36 @@ Ans=> https://angular.dev/guide/components/lifecycle
    other ways manages subscription to achieve this? Async pipe. Third party libraries
    to make them wait bioler plating? Take Until it acquires. fromNgNeet and untilDisplay.Third Party Library
 
-10) *ngFor structural directive has trackBy property
+10) *ngFor structural directive has trackBy property. What is that? What does trackBy help with?
 	https://v2.angular.io/docs/ts/latest/guide/structural-directives.html#!#asterisk
+
+11) Do you know about view encapsulation? Component decorator we have view encapsulation property. We can
+	set it to none. Can you describe it?
+
+12) What is shadow dom? Kinds of selectors in angular for css?
+
+13) What is angular ng-deep? Is it similar to css important? Why should we not use it? 
+	Use Host before ng deep if it is absolutely necessary to use.
+
+14) What is change detection stratergy? What are all the stratergies? How it is done can you tell the
+	entire process. What are the says to perform change detection? Run by Application ref t?? 
+	Change detection on the whole tree.
+
+15) What do you understand by lazy loading?
+
+=>	It is a way to split up bundles into seperate smaller bundles and to optimize initial loading time
+	only load what you need.
+
+16) How dependency injection works in angular? What are Platform Module. What will happen if lazy loaded
+	module in the parent will it be avaible to the childen through depency injection.
+
+=> Dependency injection tree and angular can provide injectables on different levels and if dependency
+	is provided on top level it is also accesbil down the line. It can be provoded on the application level or
+	platform level. Module level and the components level which is acessible to the children.
+
+17) Dependency injector lookup logic? How to restrict it? How to make it optional or Self. Can we send a
+	error message on
+
+=> In constructor.
+
+18) How do angular components interact with each other? Including the built in ways?
